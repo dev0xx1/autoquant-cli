@@ -23,6 +23,9 @@ from core.commands import (
     get_run_status,
     visualize_learning,
     status,
+    get_update_diffs,
+    run_update,
+    clear_data,
 )
 
 
@@ -267,6 +270,30 @@ def run_status_command(run_id: Annotated[str, typer.Option(...)]) -> None:
 )
 def runs_summary_command() -> None:
     _print(get_runs_summary())
+
+
+@_register(
+    "get-update-diffs",
+    "Show docs repo diffs from local clone HEAD to origin/main for update review.",
+)
+def update_diffs_get_command() -> None:
+    _print(get_update_diffs())
+
+
+@_register(
+    "run-update",
+    "Upgrade autoquant-cli package and fast-forward local docs repo clone.",
+)
+def update_run_command() -> None:
+    _print(run_update())
+
+
+@_register(
+    "clear-data",
+    "Delete workspace run, temp, and docs clone data directories.",
+)
+def clear_data_command() -> None:
+    _print(clear_data())
 
 
 def main() -> None:

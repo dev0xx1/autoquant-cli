@@ -15,6 +15,9 @@ from core.commands.get_run_status import get_run_status
 from core.commands.get_runs_summary import get_runs_summary
 from core.commands.visualize_learning import visualize_learning
 from core.commands.status import status
+from core.commands.get_update_diffs import get_update_diffs
+from core.commands.run_update import run_update
+from core.commands.clear_data import clear_data
 
 __all__ = [
     "run_experiment",
@@ -35,4 +38,7 @@ __all__ = [
     "get_runs_summary",
     "visualize_learning",
     "status",
+    "get_update_diffs",
+    "run_update",
+    "clear_data",
 ]
