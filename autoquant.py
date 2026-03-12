@@ -145,8 +145,8 @@ def register_model_command(
     model_path: Annotated[str, typer.Option(...)],
     log: Annotated[str, typer.Option(...)],
     reasoning: Annotated[str, typer.Option()] = "",
-    training_size_days: Annotated[int, typer.Option()] = 30,
-    test_size_days: Annotated[int, typer.Option()] = 7,
+    training_size_days: Annotated[int, typer.Option()] = 14,
+    test_size_days: Annotated[int, typer.Option()] = 5,
     generation: Annotated[int | None, typer.Option()] = None,
     parent_id: Annotated[str, typer.Option()] = "",
     refresh_data: Annotated[bool, typer.Option()] = False,
@@ -174,8 +174,8 @@ def register_model_command(
 def validate_model_command(
     model_path: Annotated[str, typer.Option(...)],
     task: Annotated[Literal["classification", "regression"], typer.Option(...)],
-    training_size_days: Annotated[int, typer.Option()] = 30,
-    test_size_days: Annotated[int, typer.Option()] = 7,
+    training_size_days: Annotated[int, typer.Option()] = 14,
+    test_size_days: Annotated[int, typer.Option()] = 5,
     refresh_data: Annotated[bool, typer.Option()] = False,
 ) -> None:
     _print(

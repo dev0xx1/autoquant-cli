@@ -75,8 +75,8 @@ def _resolve_validation_model(
 def validate_model(
     model_path: str,
     task: str,
-    training_size_days: int = 30,
-    test_size_days: int = 7,
+    training_size_days: int = 14,
+    test_size_days: int = 5,
     refresh_data: bool = False,
 ) -> dict[str, Any]:
     source_path = Path(model_path)
