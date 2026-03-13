@@ -18,6 +18,7 @@ from core.commands.status import status
 from core.commands.get_update_diffs import get_update_diffs
 from core.commands.run_update import run_update
 from core.commands.clear_data import clear_data
+from core.commands.pull_docs import pull_docs
 
 __all__ = [
     "run_experiment",
@@ -41,4 +42,5 @@ __all__ = [
     "get_update_diffs",
     "run_update",
     "clear_data",
+    "pull_docs",
 ]

@@ -26,6 +26,7 @@ from core.commands import (
     get_update_diffs,
     run_update,
     clear_data,
+    pull_docs,
 )
 
 
@@ -270,6 +271,14 @@ def run_status_command(run_id: Annotated[str, typer.Option(...)]) -> None:
 )
 def runs_summary_command() -> None:
     _print(get_runs_summary())
+
+
+@_register(
+    "pull-docs",
+    "Clone docs repo if missing and fast-forward local docs clone to origin/main.",
+)
+def pull_docs_command() -> None:
+    _print(pull_docs())
 
 
 @_register(
